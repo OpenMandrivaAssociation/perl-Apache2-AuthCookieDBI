@@ -11,7 +11,6 @@ Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Apache2/%{real_name}-%{ve
 BuildRequires:	perl-devel
 BuildRequires:	perl(Apache::DBI) >= 0.91
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 Apache2::AuthCookieDBI is a module that subclasses Apache2::AuthCookie and is
