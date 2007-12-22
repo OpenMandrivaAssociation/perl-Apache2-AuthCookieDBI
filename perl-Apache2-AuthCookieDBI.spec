@@ -3,7 +3,7 @@
 Summary:	Apache2::AuthCookieDBI - An AuthCookie module backed by a DBI database
 Name:		perl-%{real_name}
 Version:	2.03
-Release: %mkrel 2
+Release: %mkrel 3
 License:	LGPL
 Group:		Development/Perl
 URL:		http://search.cpan.org/dist/%{real_name}
