@@ -1,17 +1,16 @@
-%define real_name Apache2-AuthCookieDBI
+%define module Apache2-AuthCookieDBI
 
-Summary:	Apache2::AuthCookieDBI - An AuthCookie module backed by a DBI database
-Name:		perl-%{real_name}
+Name:		perl-%{module}
 Version:	2.03
-Release: %mkrel 3
+Release:    %mkrel 4
+Summary:	An AuthCookie module backed by a DBI database
 License:	LGPL
 Group:		Development/Perl
-URL:		http://search.cpan.org/dist/%{real_name}
-Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Apache2/%{real_name}-%{version}.tar.bz2
-BuildRequires:	perl-devel
+URL:		http://search.cpan.org/dist/%{module}
+Source:		http://search.cpan.org/CPAN/modules/by-module/Apache2/%{module}-%{version}.tar.bz2
 BuildRequires:	perl(Apache::DBI) >= 0.91
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
+BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 Apache2::AuthCookieDBI is a module that subclasses Apache2::AuthCookie and is
@@ -24,11 +23,13 @@ checksummed and expire-time checked.
 
 
 %prep
-%setup -q -n %{real_name}-%{version} 
+%setup -q -n %{module}-%{version} 
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
 %make
+
+%check
 make test
 
 %install
@@ -41,8 +42,5 @@ rm -rf %{buildroot}
 %files
 %defattr(-,root,root)
 %doc Changes README eg *.txt *.sql
-%{perl_vendorlib}/Apache2/AuthCookieDBI.pm
+%{perl_vendorlib}/Apache2
 %{_mandir}/*/*
-
-
-
