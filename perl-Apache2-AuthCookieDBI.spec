@@ -2,7 +2,7 @@
 
 Name:		perl-%{module}
 Version:	2.03
-Release:    %mkrel 4
+Release:    %mkrel 6
 Summary:	An AuthCookie module backed by a DBI database
 License:	LGPL
 Group:		Development/Perl
