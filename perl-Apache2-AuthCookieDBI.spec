@@ -9,6 +9,7 @@ Group:		Development/Perl
 URL:		http://search.cpan.org/dist/%{module}
 Source:		http://search.cpan.org/CPAN/modules/by-module/Apache2/%{module}-%{version}.tar.bz2
 BuildRequires:	perl(Apache::DBI) >= 0.91
+BuildRequires:	perl(Date::Calc)
 BuildArch:	noarch
 BuildRoot:	%{_tmppath}/%{name}-%{version}
 
