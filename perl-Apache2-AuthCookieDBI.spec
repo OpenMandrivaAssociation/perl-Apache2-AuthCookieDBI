@@ -1,8 +1,8 @@
 %define module Apache2-AuthCookieDBI
 
 Name:		perl-%{module}
-Version:	2.03
-Release:    %mkrel 6
+Version:	2.04
+Release:    %mkrel 1
 Summary:	An AuthCookie module backed by a DBI database
 License:	LGPL
 Group:		Development/Perl
