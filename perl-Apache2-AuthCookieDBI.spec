@@ -1,19 +1,21 @@
 %define upstream_name    Apache2-AuthCookieDBI
-%define upstream_version 2.14
+%define upstream_version 2.17
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	2
+Release:	1
 
 Summary:	An AuthCookie module backed by a DBI database
 License:	LGPL
 Group:		Development/Perl
 URL:		http://search.cpan.org/dist/%{upstream_name}
-Source0:	http://search.cpan.org/CPAN/modules/by-module/Apache2/%{upstream_name}-%{upstream_version}.tar.bz2
+Source0:	http://www.cpan.org/modules/by-module/Apache2/Apache2-AuthCookieDBI-%{upstream_version}.tar.gz
 
 BuildRequires:	perl-devel
 BuildRequires:	perl(Apache::DBI) >= 0.91
 BuildRequires:	perl(Date::Calc)
+BuildRequires:	perl(Digest::SHA)
+BuildRequires:	apache-mod_perl
 BuildArch:	noarch
 
 %description
@@ -96,4 +98,5 @@ make test
 
 * Sat Jul 16 2005 Oden Eriksson <oeriksson@mandriva.com> 2.03-1mdk
 - initial Mandriva package
+
 
