@@ -8,7 +8,7 @@ Release:	3
 Summary:	An AuthCookie module backed by a DBI database
 License:	LGPL
 Group:		Development/Perl
-URL:		http://search.cpan.org/dist/%{upstream_name}
+URL:		https://search.cpan.org/dist/%{upstream_name}
 Source0:	http://www.cpan.org/modules/by-module/Apache2/Apache2-AuthCookieDBI-%{upstream_version}.tar.gz
 
 BuildRequires:	perl-devel
