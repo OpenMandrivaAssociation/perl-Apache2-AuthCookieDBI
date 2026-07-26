@@ -1,15 +1,13 @@
 %define upstream_name    Apache2-AuthCookieDBI
-%define upstream_version 2.17
-
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	3
+Version:	2.17
+Release:	4
 
 Summary:	An AuthCookie module backed by a DBI database
 License:	LGPL
 Group:		Development/Perl
-URL:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/Apache2/Apache2-AuthCookieDBI-%{upstream_version}.tar.gz
+URL:		https://metacpan.org/dist/%{upstream_name}
+Source0:	http://www.cpan.org/modules/by-module/Apache2/Apache2-AuthCookieDBI-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -29,7 +27,7 @@ a configurable time period.  Incoming requests with tickets are
 checksummed and expire-time checked.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -58,9 +56,7 @@ make test
 
 * Wed Jul 29 2009 JÃ©rÃ´me Quelin <jquelin@mandriva.org> 2.50.0-1mdv2011.0
 + Revision: 402969
-- rebuild using %%perl_convert_version
-
-* Wed May 20 2009 Guillaume Rousse <guillomovitch@mandriva.org> 2.05-1mdv2010.0
+- rebuild using %2.17 Wed May 20 2009 Guillaume Rousse <guillomovitch@mandriva.org> 2.05-1mdv2010.0
 + Revision: 377832
 - update to new version 2.05
 
